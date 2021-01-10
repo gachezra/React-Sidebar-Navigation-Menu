@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import { SidebarData } from './SidebarData';
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
@@ -10,7 +11,7 @@ function Navbar() {
     <>
       <div className="navbar">
         <Link to="#" className="menu-bars">
-          <FaIcons.FaBars />
+          <FaIcons.FaBars onClick={showSidebar} />
         </Link>
       </div>
       <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
