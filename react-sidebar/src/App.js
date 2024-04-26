@@ -5,9 +5,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 // PAGES
 import Home from './pages/Home';
-import Contact from './pages/Contact';
-import Products from './pages/Products';
-import Reports from './pages/Reports';
+import Rooms from './pages/Rooms';
 
 function App() {
   return (
@@ -16,9 +14,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/contact" exact component={Contact} />
-          <Route path="/products" exact component={Products} />
-          <Route path="/reports" exact component={Reports} />
+          <Route path="/rooms" exact component={Rooms} />
         </Switch>
       </Router>
     </>
