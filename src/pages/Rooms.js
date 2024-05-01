@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import 'ldrs/ring';
 
 const Rooms = () => {
  const [rooms, setRooms] = useState([]);
@@ -113,6 +114,7 @@ const Rooms = () => {
            </ul>
          )}
        </div>
+       <l-ring size="60" color="coral"></l-ring>
      </div>
    </div>
  );

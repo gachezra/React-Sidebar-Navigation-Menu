@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Deck from './Deck';
+import 'ldrs/ring';
 
 const Room = ({ roomId }) => {
  const [room, setRoom] = useState(null);
  const [player, setPlayer] = useState(null);
- const [deck, setDeck] = useState(new Deck());
  const [topCard, setTopCard] = useState(null);
  const [stack, setStack] = useState([]);
  const [winner, setWinner] = useState(null);
@@ -18,7 +17,6 @@ const Room = ({ roomId }) => {
    try {
      const response = await axios.get(`/api/rooms/${roomId}`);
      setRoom(response.data);
-     setPlayer(response.data.playerList.find((p) => p.userId === userId));
      setTopCard(response.data.topCard);
      setStack(response.data.stack);
      setWinner(response.data.winner);
@@ -41,7 +39,7 @@ const Room = ({ roomId }) => {
    } catch (error) {
      console.error('Error making move:', error);
    }
- };
+ }; 
 
  const pickCard = () => {
    makeMove('pick');
@@ -52,7 +50,7 @@ const Room = ({ roomId }) => {
  };
 
  if (!room || !player) {
-   return <div>Loading...</div>;
+   return <div><l-ring size="60" color="coral"></l-ring></div>;
  }
 
  return (

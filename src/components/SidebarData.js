@@ -19,7 +19,7 @@ export const SidebarData = [
   },
   {
     title: 'Join Room',
-    path: '/join-room',
+    path: '/room',
     icon: <FaIcons.FaPlay />,
     cName: 'nav-text',
   },

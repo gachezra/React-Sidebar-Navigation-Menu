@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 // PAGES
 import Home from './pages/Home';
 import Rooms from './pages/Rooms';
+import Room from './pages/Room';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/rooms" exact component={Rooms} />
+          <Route path="/room" exact component={Room} />
         </Switch>
       </Router>
     </>

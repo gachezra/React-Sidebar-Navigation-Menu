@@ -42,3 +42,7 @@
 span {
   @apply ml-4;
 }
+
+.delay-3000 {
+  transition-delay: 3s; /* Adjust the value here for different delays */
+}
